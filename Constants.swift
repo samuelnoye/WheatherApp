@@ -9,6 +9,7 @@ import Foundation
 
 struct WeatherUrl {
     private let baseUrl = "https://api.worldweatheronline.com/premium/v1/weather.ashx"
+    
 }
 struct SkinType {
     let type1 = "Type 1 - Pale / Light"
