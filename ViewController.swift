@@ -61,9 +61,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("Location changed")
-        if status == .authorizedWhenInUse{
+       // print("Location changed")
+        
+        if status == .authorizedWhenInUse {
             getLocation()
+            //print("fdhf")
         }else if status == .denied {
             let alert = UIAlertController(title: "Error", message: "Go to seettings and allow app to access your location! App can't function without it!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -73,10 +75,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func getLocation() {
         if let loc = locationManager.location?.coordinate {
             coords = loc
+            getWeatherData()
         }
-        
     }
-
+    func getWeatherData() -> String {
+        let url = WeatherUrl(lat: String(coords.latitude), long: String(coords.longitude)).getFullUrl()
+  return url
+        // print(url)
+    }
 
 }
 
