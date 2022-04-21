@@ -78,10 +78,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             getWeatherData()
         }
     }
-    func getWeatherData() -> String {
+    func getWeatherData() {
         let url = WeatherUrl(lat: String(coords.latitude), long: String(coords.longitude)).getFullUrl()
-  return url
-        // print(url)
+        print(url)
     }
 
 }
