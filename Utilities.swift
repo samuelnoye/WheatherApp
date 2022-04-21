@@ -25,15 +25,3 @@ class Utilities {
     }
 }
 
-struct SkinType {
-    let type1 = "Type 1 - Pale / Light"
-    let type2 = "Type 2 - White / Fair"
-    let type3 = "Type 3 - Mdeium / Light"
-    let type4 = "Type 4 - Olive Brown"
-    let type5 = "Type 5 - Dark Brown"
-    let type6 = "Type 6 - Very Dark / Black"
-}
-
-struct defualtkeys {
-    static let skinType = "skinType"
-}
