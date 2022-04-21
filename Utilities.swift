@@ -12,7 +12,9 @@ class Utilities {
         return UserDefaults.standard
     }
     func setSkinType (value: String) {
-       
+        let defualts = getStorage()
+        defualts.setValue(value, forKey: defualtkeys.skinType)
+        defualts.synchronize()
     }
     func getSkinType() -> String {
         let defualt = getStorage()
