@@ -28,6 +28,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        skintype = Utilities().getSkinType()
         skinLbl.text = "Skin: " + self.skintype
     }
     override func didReceiveMemoryWarning() {
