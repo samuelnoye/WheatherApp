@@ -16,6 +16,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var skintype = SkinType().type1 {
         didSet{
             skinLbl.text = "Skin: " + self.skintype
+            Utilities().setSkinType(value: skintype)
         }
     }
     
