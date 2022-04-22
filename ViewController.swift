@@ -94,7 +94,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //                        }
 //                    }
 //                }
-//                
+//
                 guard let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject], let weather = data["weather"] as? [Dictionary<String, AnyObject>], let uvI = weather[0]["uvIndex"] as? String else {
                       return
                     }
@@ -107,5 +107,5 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
     }
     }
-}
+
 
