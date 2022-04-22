@@ -87,15 +87,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if let JSON = response.result.value {
                 print(JSON)
 
-                if let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject]{
-                    if let weather = data["weather"] as? [Dictionary<String, AnyObject>]{
-                        if let uvI = weather[0]["uvIndex"] as? String {
-                            self.uvIndex = uvI
-                        }
+//                if let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject]{
+//                    if let weather = data["weather"] as? [Dictionary<String, AnyObject>]{
+//                        if let uvI = weather[0]["uvIndex"] as? String {
+//                            self.uvIndex = uvI
+//                        }
+//                    }
+//                }
+//                
+                guard let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject], let weather = data["weather"] as? [Dictionary<String, AnyObject>], let uvI = weather[0]["uvIndex"] as? String else {
+                      return
                     }
+                self.uvIndex = uvI
                 }
-                
-                
                 
                 
                 
