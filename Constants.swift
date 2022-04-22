@@ -32,6 +32,16 @@ struct SkinType {
     let type5 = "Type 5 - Dark Brown"
     let type6 = "Type 6 - Very Dark / Black"
 }
+
+struct BurnTime {
+    //all time in minutes
+    let burType1: Double = 67
+    let burType2: Double = 100
+    let burType3: Double = 200
+    let burType4: Double = 300
+    let burType5: Double = 400
+    let burType6: Double = 500
+}
 struct defualtkeys {
     static let skinType = "skinType"
 }
