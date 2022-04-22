@@ -115,7 +115,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 return
             }
             self.activityIndicator.stopAnimating()
-            self.statusLbl.text = " "
+            self.statusLbl.text = "Data Available"
             self.CalculateBurnTime()
             print("BurnTime: \(self.burnTime)")
         }
