@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-ExtraBold.ttf">
-            <string>Poppins-ExtraBold</string>
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
         </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
@@ -68,7 +68,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120.5" id="fjL-s3-FJH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="86"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="86"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
