@@ -12,7 +12,9 @@ import MapKit
 import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var skinLbl: UILabel!
     var skintype = SkinType().type1 {
         didSet{
@@ -36,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Do any additional setup after loading the view.
-    
+        
     }
     @IBAction func changeSkinBtn(_ sender: UIButton) {
         let alert = UIAlertController(title: "Skin Type", message: "Please choose skin type!", preferredStyle: .actionSheet)
@@ -62,7 +64,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-       // print("Location changed")
+        // print("Location changed")
         
         if status == .authorizedWhenInUse {
             getLocation()
@@ -86,27 +88,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print("Alamofire: \(response.result)")
             if let JSON = response.result.value {
                 print(JSON)
-
-//                if let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject]{
-//                    if let weather = data["weather"] as? [Dictionary<String, AnyObject>]{
-//                        if let uvI = weather[0]["uvIndex"] as? String {
-//                            self.uvIndex = uvI
-//                        }
-//                    }
-//                }
-//
+                
+                //                if let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject]{
+                //                    if let weather = data["weather"] as? [Dictionary<String, AnyObject>]{
+                //                        if let uvI = weather[0]["uvIndex"] as? String {
+                //                            self.uvIndex = uvI
+                //                        }
+                //                    }
+                //                }
+                //
                 guard let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject], let weather = data["weather"] as? [Dictionary<String, AnyObject>], let uv = weather[0]["uvIndex"] as? String, let uvI = Int(uv) else {
-                      return
-                    }
+                    self.UpdtaeUI(dataSuccess: false)
+                    return
+                }
                 self.uvIndex = uvI
                 print("AT LAST UV INDEX: \(uvI)")
-                }
-                
-                
-                
-                
+                self.UpdtaeUI(dataSuccess: true)
+                return
             }
+        }
     }
+    
+    func UpdtaeUI (dataSuccess: Bool ){
+        DispatchQueue.main.async {
+            if !dataSuccess {
+                self.statusLbl.text = "Failed...retrying..."
+                self.getWeatherData()
+                return
+            }
+            self.activityIndicator.stopAnimating()
+            self.statusLbl.text = "Got UV data"
+        }
     }
+}
 
 
