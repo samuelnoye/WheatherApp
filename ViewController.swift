@@ -73,7 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if granted {
                 let content = UNMutableNotificationContent()
                 content.title = NSString.localizedUserNotificationString(forKey: "Time's up", arguments: nil)
-                content.body = NSString.localizedUserNotificationString(forKey: "you are beginning to burn! Please put on sunblock, clothing or get under shelter1", arguments: nil)
+                content.body = NSString.localizedUserNotificationString(forKey: "you are beginning to burn! Please put on sunblock, clothing or get under shelter!", arguments: nil)
                 content.sound = UNNotificationSound.default
                 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
