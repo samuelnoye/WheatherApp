@@ -65,22 +65,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        // print("Location changed")
-        
         if status == .authorizedWhenInUse {
             getLocation()
-            //print("fdhf")
         }else if status == .denied {
             let alert = UIAlertController(title: "Error", message: "Go to seettings and allow app to access your location! App can't function without it!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
     func getLocation() {
         if let loc = locationManager.location?.coordinate {
             coords = loc
-            getWeatherData()
-        }
+         }
     }
     func getWeatherData() {
         let url = WeatherUrl(lat: String(coords.latitude), long: String(coords.longitude)).getFullUrl()
@@ -118,7 +115,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 return
             }
             self.activityIndicator.stopAnimating()
-            self.statusLbl.text = ""
+            self.statusLbl.text = " "
             self.CalculateBurnTime()
             print("BurnTime: \(self.burnTime)")
         }
