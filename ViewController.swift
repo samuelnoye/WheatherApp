@@ -20,6 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             Utilities().setSkinType(value: skintype)
         }
     }
+    var uvIndex = 8
     
     let locationManager = CLLocationManager()
     var coords = CLLocationCoordinate2D(latitude: 40, longitude: 40)
