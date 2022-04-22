@@ -117,7 +117,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 return
             }
             self.activityIndicator.stopAnimating()
-            self.statusLbl.text = "Got UV data"
+            self.statusLbl.text = ""
+            self.CalculateBurnTime()
+            print("BurnTime: \(self.burnTime)")
         }
     }
     
@@ -140,6 +142,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         default:
             minToBurn = BurnTime().burType1
         }
+        burnTime = minToBurn / Double(self.uvIndex)
     }
 }
 
