@@ -20,7 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             Utilities().setSkinType(value: skintype)
         }
     }
-    var uvIndex = "8"
+    var uvIndex = 8
     
     let locationManager = CLLocationManager()
     var coords = CLLocationCoordinate2D(latitude: 40, longitude: 40)
@@ -95,10 +95,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //                    }
 //                }
 //
-                guard let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject], let weather = data["weather"] as? [Dictionary<String, AnyObject>], let uvI = weather[0]["uvIndex"] as? String else {
+                guard let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject], let weather = data["weather"] as? [Dictionary<String, AnyObject>], let uv = weather[0]["uvIndex"] as? String, let uvI = Int(uv) else {
                       return
                     }
                 self.uvIndex = uvI
+                print("AT LAST UV INDEX: \(uvI)")
                 }
                 
                 
