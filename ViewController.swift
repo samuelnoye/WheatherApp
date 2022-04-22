@@ -10,6 +10,7 @@
 import UIKit
 import MapKit
 import Alamofire
+import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -66,7 +67,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func remindMeBtn(_ sender: UIButton) {
-        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) {
+            (granted, error) in
+            if granted {
+                let content = UNMutableNotificationContent()
+                content.title = NSString.localizedUserNotificationString(forKey: "Time's up", arguments: nil)
+            }
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
