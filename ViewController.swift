@@ -23,7 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     var uvIndex = 8
-    
+    var burnTime: Double = 10
     let locationManager = CLLocationManager()
     var coords = CLLocationCoordinate2D(latitude: 40, longitude: 40)
     
@@ -118,6 +118,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             self.activityIndicator.stopAnimating()
             self.statusLbl.text = "Got UV data"
+        }
+    }
+    
+    func CalculateBurnTime(){
+        var minToBurn: Double = 10
+        
+        switch skintype {
+        case SkinType().type1:
+            minToBurn = BurnTime().burType1
+        case SkinType().type2:
+            minToBurn = BurnTime().burType2
+        case SkinType().type3:
+            minToBurn = BurnTime().burType3
+        case SkinType().type4:
+            minToBurn = BurnTime().burType4
+        case SkinType().type5:
+            minToBurn = BurnTime().burType5
+        case SkinType().type6:
+            minToBurn = BurnTime().burType6
+        default:
+            minToBurn = BurnTime().burType1
         }
     }
 }
