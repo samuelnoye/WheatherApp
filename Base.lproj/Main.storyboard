@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -39,17 +39,24 @@
                                     <action selector="changeSkinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQj-0x-7XF"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Rvl-LI-xbH">
+                                <rect key="frame" x="136" y="815" width="176" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rvl-LI-xbH" secondAttribute="trailing" constant="168" id="4ZD-W4-xoD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rvl-LI-xbH" secondAttribute="bottom" constant="50" id="60b-gc-jpL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXM-Vi-ce8" secondAttribute="trailing" constant="30" id="Eag-ja-ZAI"/>
+                            <constraint firstItem="Rvl-LI-xbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="HnG-Wc-GNz"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="J5Z-Be-uaZ"/>
                             <constraint firstItem="a66-Zy-Ccv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="K0O-gW-YN5"/>
                             <constraint firstItem="a66-Zy-Ccv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Krx-kb-k6V"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="centerY" secondItem="a66-Zy-Ccv" secondAttribute="centerY" id="aF6-Gw-yxv"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="leading" secondItem="a66-Zy-Ccv" secondAttribute="trailing" constant="8" id="aeG-OJ-dS4"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="ajq-sl-rEO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rvl-LI-xbH" secondAttribute="bottom" constant="20" id="spW-Cp-P6Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXM-Vi-ce8" secondAttribute="trailing" constant="30" id="uAv-Yv-wA6"/>
                         </constraints>
                     </view>
