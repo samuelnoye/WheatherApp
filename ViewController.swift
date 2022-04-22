@@ -20,7 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             Utilities().setSkinType(value: skintype)
         }
     }
-    var uvIndex = 8
+    var uvIndex = "8"
     
     let locationManager = CLLocationManager()
     var coords = CLLocationCoordinate2D(latitude: 40, longitude: 40)
@@ -86,9 +86,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print("Alamofire: \(response.result)")
             if let JSON = response.result.value {
                 print(JSON)
-            }
-        }
-    }
 
+                if let dictionary = JSON as? [String: AnyObject], let data = dictionary["data"] as? [String: AnyObject]{
+                    if let weather = data["weather"] as? [Dictionary<String, AnyObject>]{
+                        if let uvI = weather[0]["uvIndex"] as? String {
+                            self.uvIndex = uvI
+                        }
+                    }
+                }
+                
+                
+                
+                
+                
+                
+            }
+    }
+    }
 }
 
