@@ -77,6 +77,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="swift" catalog="system" title="  Set Reminder"/>
+                                <connections>
+                                    <action selector="remindMeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7h-97-2Tm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
