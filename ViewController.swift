@@ -78,6 +78,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                 let request = UNNotificationRequest(identifier: "willburn", content: content, trigger: trigger)
+                
+                center.add(request)
             }
         }
     }
