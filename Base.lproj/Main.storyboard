@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Light.ttf">
-            <string>Poppins-Light</string>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
@@ -25,13 +25,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXM-Vi-ce8">
-                                <rect key="frame" x="65" y="90.5" width="319" height="26"/>
+                                <rect key="frame" x="65" y="87.5" width="319" height="26"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a66-Zy-Ccv">
-                                <rect key="frame" x="10" y="88" width="47" height="31"/>
+                                <rect key="frame" x="10" y="88" width="47" height="25"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePadding="3">
                                     <imageReference key="image" image="repeat.circle.fill" catalog="system" symbolScale="large"/>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes until you burn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krQ-1u-BpS">
-                                <rect key="frame" x="47" y="318.5" width="320" height="26"/>
+                                <rect key="frame" x="47" y="312.5" width="320" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="cLf-5Z-PSM"/>
                                 </constraints>
@@ -64,14 +64,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujt-Yg-2Il">
-                                <rect key="frame" x="10" y="398.5" width="394" height="120.5"/>
+                                <rect key="frame" x="10" y="392.5" width="394" height="120.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120.5" id="fjL-s3-FJH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="86"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="86"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrM-KJ-RfT">
+                                <rect key="frame" x="99" y="521" width="216" height="37"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="swift" catalog="system" title="  Set Reminder"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,15 +86,19 @@
                             <constraint firstItem="Ujt-Yg-2Il" firstAttribute="top" secondItem="krQ-1u-BpS" secondAttribute="bottom" constant="54" id="3VH-SC-2Oh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rvl-LI-xbH" secondAttribute="trailing" constant="119" id="4ZD-W4-xoD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krQ-1u-BpS" secondAttribute="trailing" constant="47" id="5Bg-Jp-s8k"/>
+                            <constraint firstItem="JrM-KJ-RfT" firstAttribute="top" secondItem="Ujt-Yg-2Il" secondAttribute="bottom" constant="8" symbolic="YES" id="EQK-D9-IvB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXM-Vi-ce8" secondAttribute="trailing" constant="30" id="Eag-ja-ZAI"/>
+                            <constraint firstItem="JrM-KJ-RfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="F6c-Ix-0wR"/>
+                            <constraint firstItem="Rvl-LI-xbH" firstAttribute="top" secondItem="JrM-KJ-RfT" secondAttribute="bottom" constant="175" id="GfJ-yG-ii7"/>
                             <constraint firstItem="Rvl-LI-xbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="HnG-Wc-GNz"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="J5Z-Be-uaZ"/>
                             <constraint firstItem="a66-Zy-Ccv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="K0O-gW-YN5"/>
                             <constraint firstItem="a66-Zy-Ccv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Krx-kb-k6V"/>
                             <constraint firstItem="Rvl-LI-xbH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-53" id="M3K-sD-bAe"/>
                             <constraint firstItem="Ujt-Yg-2Il" firstAttribute="top" secondItem="krQ-1u-BpS" secondAttribute="bottom" constant="54" id="N43-JX-FE7"/>
-                            <constraint firstItem="Rvl-LI-xbH" firstAttribute="top" secondItem="Ujt-Yg-2Il" secondAttribute="bottom" constant="214" id="Oku-uq-wWc"/>
+                            <constraint firstItem="Rvl-LI-xbH" firstAttribute="top" secondItem="Ujt-Yg-2Il" secondAttribute="bottom" constant="220" id="Oku-uq-wWc"/>
                             <constraint firstItem="Ujt-Yg-2Il" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Omt-eQ-Xrt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrM-KJ-RfT" secondAttribute="trailing" constant="99" id="WiJ-h2-pnZ"/>
                             <constraint firstItem="krQ-1u-BpS" firstAttribute="top" secondItem="a66-Zy-Ccv" secondAttribute="bottom" constant="199.5" id="X88-E2-vBL"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="centerY" secondItem="a66-Zy-Ccv" secondAttribute="centerY" id="aF6-Gw-yxv"/>
                             <constraint firstItem="bXM-Vi-ce8" firstAttribute="leading" secondItem="a66-Zy-Ccv" secondAttribute="trailing" constant="8" id="aeG-OJ-dS4"/>
@@ -113,5 +123,6 @@
     </scenes>
     <resources>
         <image name="repeat.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="swift" catalog="system" width="128" height="113"/>
     </resources>
 </document>
