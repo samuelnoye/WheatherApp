@@ -19,7 +19,7 @@ struct WeatherUrl {
         self.coorStr = "?q=\(lat),\(long)"
     }
     
-    func getFullUrl () -> String {
+    func getFullUrl() -> String {
         return baseUrl + coorStr + key + numDaysForecast + format
     }
      
