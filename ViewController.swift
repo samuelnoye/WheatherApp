@@ -14,6 +14,7 @@ import Alamofire
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var burnTimeLbl: UILabel!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var skinLbl: UILabel!
     var skintype = SkinType().type1 {
@@ -118,6 +119,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.statusLbl.text = "Data Available"
             self.CalculateBurnTime()
             print("BurnTime: \(self.burnTime)")
+            self.burnTimeLbl.text = String(self.burnTime)
         }
     }
     
