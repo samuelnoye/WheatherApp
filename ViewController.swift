@@ -81,7 +81,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func getWeatherData() {
         let url = WeatherUrl(lat: String(coords.latitude), long: String(coords.longitude)).getFullUrl()
         print(url)
-       // Alamofire.request(url).responseJSON(completionHandler: <#T##(DataResponse<Any>) -> Void#>)
+        Alamofire.request(url).responseJSON{ response in
+            print("Alamofire: \(response.result)")
+            if let JSON = response.result.value {
+                print(JSON)
+            }
+        }
     }
 
 }
