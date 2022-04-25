@@ -99,6 +99,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             coords = loc
          }
     }
+    
     func getWeatherData() {
         let url = WeatherUrl(lat: String(coords.latitude), long: String(coords.longitude)).getFullUrl()
         print(url)
