@@ -14,7 +14,7 @@ class Utilities {
     func setSkinType (value: String) {
         let defualts = getStorage()
         defualts.setValue(value, forKey: defualtkeys.skinType)
-        defualts.synchronize()
+      //  defualts.synchronize()
     }
     func getSkinType() -> String {
         let defualt = getStorage()
