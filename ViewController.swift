@@ -23,6 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             skinLbl.text = "Skin: " + self.skintype
             Utilities().setSkinType(value: skintype)
             getWeatherData()
+            print("run..")
         }
     }
     var uvIndex = 8
@@ -44,6 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     @IBAction func changeSkinBtn(_ sender: UIButton) {
+        print("hbdfh")
         let alert = UIAlertController(title: "Skin Type", message: "Please choose skin type!", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: SkinType().type1, style: .default, handler: { (action) in
             self.skintype = SkinType().type1
