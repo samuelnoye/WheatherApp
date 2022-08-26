@@ -23,7 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             skinLbl.text = "Skin: " + self.skintype
             Utilities().setSkinType(value: skintype)
             getWeatherData()
-            print("run..")
+            print("run..",self.skintype)
         }
     }
     var uvIndex = 8
