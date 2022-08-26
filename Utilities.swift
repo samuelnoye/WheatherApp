@@ -21,7 +21,7 @@ class Utilities {
         if let result = defualt.string(forKey: defualtkeys.skinType){
             return result
         }
-           // return SkinType().type1
+            return SkinType().type1
     }
 }
 
