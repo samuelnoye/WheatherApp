@@ -7,8 +7,4 @@ App that calculates to tell user the number of minutes they have before they get
 3. Does calculation to show user the number of minutes they have till they get burn.
 4. Users can also set reminder to notify even when the screen is off in order to get out of the sun.
 
- extension UIScreen{
-    static let screenWidth = UIScreen.main.bounds.size.width
-    static let screenHeight = UIScreen.main.bounds.size.height
-    static let screenSize = UIScreen.main.bounds.size
-}
+
